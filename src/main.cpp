@@ -87,16 +87,17 @@ int main()
         cin >> NewMoney;
         cout << "Set Speed" << "\n";
         cin >> NewSpeed;
+
+      Player1.SetName("Carlos");
+      Player1.SetMoney(NewMoney);
+      Player1.SetSpeed(NewSpeed);
+      Player1.SetLife(NewLife);
+      cout << "The Players Name is " << Player1.GetName() << "\n";
+      cout << "The Players Life is " << Player1.GetLife() << "\n";
+      cout << "The Players Speed is " << Player1.GetSpeed() << "\n";
+      cout << "The Players Money is " << Player1.GetMoney() << "\n";
     }
     
-    Player1.SetName("Carlos");
-    Player1.SetMoney(NewMoney);
-    Player1.SetSpeed(NewSpeed);
-    Player1.SetLife(NewLife);
-    cout << "The Players Name is " << Player1.GetName() << "\n";
-    cout << "The Players Life is " << Player1.GetLife() << "\n";
-    cout << "The Players Speed is " << Player1.GetSpeed() << "\n";
-    cout << "The Players Money is " << Player1.GetMoney() << "\n";
 
 
     return 0;
