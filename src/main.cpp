@@ -55,12 +55,19 @@ class Player
     return Speed;
   }
 
+  void SetParameters(string Name, float Money, int Speed, int Life)
+  {
+    SetName(Name);
+    SetMoney(Money);
+    SetSpeed(Speed);
+    SetLife(Life);
+  }
+
 };
 
 int main()
 {
     int NewMoney, NewSpeed, NewLife;
-    bool Answer;
     NewMoney = 50;
     NewSpeed = 20;
     NewLife = 100;
@@ -75,30 +82,12 @@ int main()
     cout << "The Players Speed is " << Player1.GetSpeed() << "\n";
     cout << "The Players Money is " << Player1.GetMoney() << "\n";
 
-    cout << "Would you like to edit these values?" << "\n";
-    cout << "Yes = 1 | No = 0" << "\n";
-    cin >> Answer;
+    Player1.SetParameters("Juan", 100, 40, 200);
 
-    if (Answer)
-    {
-        cout << "Set LifePoints" << "\n";
-        cin >> NewLife;
-        cout << "Set Money" << "\n";
-        cin >> NewMoney;
-        cout << "Set Speed" << "\n";
-        cin >> NewSpeed;
-
-      Player1.SetName("Carlos");
-      Player1.SetMoney(NewMoney);
-      Player1.SetSpeed(NewSpeed);
-      Player1.SetLife(NewLife);
-      cout << "The Players Name is " << Player1.GetName() << "\n";
-      cout << "The Players Life is " << Player1.GetLife() << "\n";
-      cout << "The Players Speed is " << Player1.GetSpeed() << "\n";
-      cout << "The Players Money is " << Player1.GetMoney() << "\n";
-    }
-    
-
+    cout << "The New Players Name is " << Player1.GetName() << "\n";
+    cout << "The New Players Life is " << Player1.GetLife() << "\n";
+    cout << "The New Players Speed is " << Player1.GetSpeed() << "\n";
+    cout << "The New Players Money is " << Player1.GetMoney() << "\n";
 
     return 0;
 }
