@@ -84,7 +84,6 @@ int main()
 
     Player1.IncreaseofStadistics(100, 40, 200);
 
-    cout << "The New Players Name is " << Player1.GetName() << "\n";
     cout << "The New Players Life is " << Player1.GetLife() << "\n";
     cout << "The New Players Speed is " << Player1.GetSpeed() << "\n";
     cout << "The New Players Money is " << Player1.GetMoney() << "\n";
