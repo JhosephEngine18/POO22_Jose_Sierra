@@ -8,6 +8,7 @@ Description: This code uses one class to show and edit a players statistics
 
 #include <iostream>
 using namespace std;
+int NewMoney, NewSpeed, NewLife;
 
 class Player
 {
@@ -55,19 +56,18 @@ class Player
     return Speed;
   }
 
-  void SetParameters(string Name, float Money, int Speed, int Life)
+  void IncreaseofStadistics(float Money, int Speed, int Life)
   {
-    SetName(Name);
-    SetMoney(Money);
-    SetSpeed(Speed);
-    SetLife(Life);
+    NewMoney = NewMoney + Money;
+    NewSpeed = NewSpeed + Speed;
+    NewLife = NewLife + Life;
   }
+  
 
 };
 
 int main()
 {
-    int NewMoney, NewSpeed, NewLife;
     NewMoney = 50;
     NewSpeed = 20;
     NewLife = 100;
@@ -82,7 +82,7 @@ int main()
     cout << "The Players Speed is " << Player1.GetSpeed() << "\n";
     cout << "The Players Money is " << Player1.GetMoney() << "\n";
 
-    Player1.SetParameters("Juan", 100, 40, 200);
+    Player1.IncreaseofStadistics(100, 40, 200);
 
     cout << "The New Players Name is " << Player1.GetName() << "\n";
     cout << "The New Players Life is " << Player1.GetLife() << "\n";
